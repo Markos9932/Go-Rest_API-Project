@@ -1,6 +1,7 @@
 {
-  "name": "createuser",
-  "player": "football",
-  "email": "nntest@gmail.com",
-  "country": "Belgium"
+        "id": 6756402,
+        "name": "createuser",
+        "email": "44112313134422042214143@gmail.com",
+        "gender": "female",
+        "status": "active"
 }

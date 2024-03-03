@@ -9,7 +9,7 @@ describe('post user request - positive test cases', () => {
        cy.fixture('createuser').then((data) =>{
             
             //1. create user (POST)
-            cy.request({
+            cy.api({
                 method: 'POST',
                 url: 'https://gorest.co.in/public/v2/users',
                 headers: {
@@ -34,7 +34,7 @@ describe('post user request - positive test cases', () => {
                    const userId = response.body.id 
                    
                     //2. get user (GET)
-                    cy.request({
+                    cy.api({
                         method: 'GET',
                         url: 'https://gorest.co.in/public/v2/users/'+userId,
                         headers: {
