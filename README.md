@@ -1,7 +1,7 @@
 # ATTENTION
 
 This is a living, WIP document, which has the ultimate aim to serve as a comprehensive guide for developers, QA engineers and other interested parties
-to run, maintain and optimize Cypress E2E tests for the Go-Rest-Api-project application.
+to run, maintain and optimize Cypress E2E tests for the Go-Rest-Api application.
 
 ## Automated tests
 
@@ -19,13 +19,13 @@ npm install
 Then, in order to run all tests in console, issue:
 
 ```bash
-npx cypress run
+npm run test
 ```
 
 If you want to run tests on UI, issue:
 
 ```bash
-npx cypress open
+npm run cypress:open
 ```
 
 If you want to run all tests, issue:
