@@ -10,7 +10,7 @@ describe('post user request - negative test cases', () => {
             
             cy.api({
                 method: 'POST',
-                url: 'https://gorest.co.in/public/v2/users',
+                url: '/',
                 
                 headers: {
                     'Authorization': 'Bearer ' + test_data_credentials.accessToken
@@ -39,7 +39,7 @@ describe('post user request - negative test cases', () => {
           
           cy.api({
               method: 'POST',
-              url: 'https://gorest.co.in/public/v2/users',
+              url: '/',
               
               headers: {
                   'Authorization': 'Bearer ' + test_data_credentials.accessToken
@@ -68,7 +68,7 @@ describe('post user request - negative test cases', () => {
 
           cy.api({
               method: 'POST',
-              url: 'https://gorest.co.in/public/v2/users',
+              url: '/',
               
               headers: {
                   'Authorization': 'Bearer ' + test_data_credentials.accessToken
@@ -100,7 +100,7 @@ describe('post user request - negative test cases', () => {
   
             cy.api({
                 method: 'POST',
-                url: 'https://gorest.co.in/public/v2/users',
+                url: '/',
                 
                 headers: {
                     'Authorization': 'Bearer ' + test_data_credentials.accessToken
@@ -110,11 +110,11 @@ describe('post user request - negative test cases', () => {
         
             }).then((response) => {
                 
-              expect(response.status).to.eq(422);
-              expect(response.statusText).to.eq("Unprocessable Entity");
-              expect(response.body[0].field).to.eq("email");
-              expect(response.body[0].message).to.eq("has already been taken");
-             });
-          });
+            expect(response.status).to.eq(422);
+            expect(response.statusText).to.eq("Unprocessable Entity");
+            expect(response.body[0].field).to.eq("email");
+            expect(response.body[0].message).to.eq("has already been taken");
+           });
+        });
       })
     });

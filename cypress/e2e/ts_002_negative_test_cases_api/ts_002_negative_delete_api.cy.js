@@ -8,7 +8,7 @@ describe('Delete user - negative test cases', () => {
 
                 cy.api({
                     method: 'DELETE',
-                    url: 'https://gorest.co.in/public/v2/users/' + test_data_credentials.nonExistingUserId, 
+                    url: '/' + test_data_credentials.nonExistingUserId, 
                     headers: {
                         'Authorization': 'Bearer ' + test_data_credentials.accessToken
                     },

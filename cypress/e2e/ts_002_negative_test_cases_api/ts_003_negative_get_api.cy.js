@@ -10,7 +10,7 @@ describe('Get user - negative test cases ', () => {
             
                      cy.api({
                         method: 'GET',
-                        url: 'https://gorest.co.in/public/v2/users/'+ test_data_credentials.existingUserId,
+                        url: '/'+ test_data_credentials.existingUserId,
                         headers: {
                             'Authorization': 'Bearer ' + test_data_credentials.invalidToken
                         },

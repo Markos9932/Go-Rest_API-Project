@@ -6,5 +6,6 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx,spec.js}',
+    baseUrl: 'https://gorest.co.in/public/v2/users/'
   },
 });

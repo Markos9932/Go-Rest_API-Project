@@ -11,7 +11,7 @@ describe('post user request - positive test cases', () => {
             // 1. create user (POST)
             cy.api({
                 method: 'POST',
-                url: 'https://gorest.co.in/public/v2/users',
+                url: '/',
                 headers: {
                     'Authorization': 'Bearer ' + test_data_credentials.accessToken
                 },
@@ -35,7 +35,7 @@ describe('post user request - positive test cases', () => {
                 // 2. update user (PUT)
                 cy.api({
                     method: 'PUT',
-                    url: 'https://gorest.co.in/public/v2/users/' + userId, 
+                    url: '/' + userId, 
                     headers: {
                         'Authorization': 'Bearer ' + test_data_credentials.accessToken
                     },
@@ -44,26 +44,26 @@ describe('post user request - positive test cases', () => {
                         gender: "male"
                     }
 
-                }).then((response) => {
-                    expect(response.status).to.eq(200);
+            }).then((response) => {
+                expect(response.status).to.eq(200);
                     expect(response.body.name).to.eq("Ryan");
-                    expect(response.body.gender).to.eq("male");
-                    expect(response.body.status).to.eq(data.status);
-                    expect(response.body.email).to.eq(test_data_credentials.email);
-                });
+                expect(response.body.gender).to.eq("male");
+                expect(response.body.status).to.eq(data.status);
+                expect(response.body.email).to.eq(test_data_credentials.email);
+            });
 
                 // 3. delete user (DELETE)
                 cy.api({
                     method: 'DELETE',
-                    url: 'https://gorest.co.in/public/v2/users/' + userId, 
+                    url: '/' + userId, 
                     headers: {
                         'Authorization': 'Bearer ' + test_data_credentials.accessToken
                     }
 
-                }).then((response) => {
-                    expect(response.status).to.eq(204);
-                });
+            }).then((response) => {
+                expect(response.status).to.eq(204);
             });
         });
+    });
     });
 });
